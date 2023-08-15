@@ -1,0 +1,31 @@
+{
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"manifest_version": 3,
+	"name": "Bible Verses Daily",
+	"description": "Daily Verses From The Holy Bible",
+	"version": "1.0",
+	"icons": {
+		"64": "img/bible64.png",
+		"128": "img/bible128.png"
+	},
+	"chrome_url_overrides": {
+		"newtab": "index.html"
+	},
+	"action": {
+		"default_title": "",
+		"default_icon": "img/bible128.png"
+	},
+	"permissions": [
+		"storage",
+		"activeTab"
+	],
+	"content_security_policy": {
+		"extension_pages": "script-src 'self'; object-src 'self';"
+	},
+	"web_accessible_resources": [
+		{
+		  "resources": ["config.json"],
+		  "matches": ["<all_urls>"]
+		}
+	  ]	  
+}
