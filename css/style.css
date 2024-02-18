@@ -38,7 +38,7 @@ body {
   text-align: center;
 }
 
-#verse {
+.box {
   color: rgba(255, 255, 255, 0.75);
   font-family: 'Source Serif Pro', Georgia, serif;
   font-size: 18px;

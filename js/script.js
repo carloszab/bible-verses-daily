@@ -1,5 +1,10 @@
-changeVerse = (verse) => {
+changeVerse = (verse, reference) => {
   document.getElementById("verse").innerHTML = verse;
+  if (reference) {
+    document.getElementById("reference").innerHTML = reference;
+  } else {
+    document.getElementById("reference").innerHTML = "";
+  }
 };
 
 fallbackVerse = () => {
@@ -40,7 +45,7 @@ function fetchBibleVerse(configuration) {
   })
     .then((response) => response.json())
     .then((text) => {
-      changeVerse(text.votd.text);
+      changeVerse(text.votd.text, text.votd.display_ref);
     })
     .catch((error) => {
       console.error("Error fetching Bible verse from Biblegateway:", error);
